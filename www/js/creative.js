@@ -7,11 +7,18 @@
 (function($) {
     "use strict"; // Start of use strict
 
+    if ('orientation' in window) {
+        $('body').addClass('mobile');
+    }
+
+    var navHeight = $('.navbar-header').height();
+
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
+        var pos = $($anchor.attr('href')).offset().top;
         $('html, body').stop().animate({
-            scrollTop: ($($anchor.attr('href')).offset().top - 50)
+            scrollTop: pos - navHeight
         }, 1250, 'easeInOutExpo');
         event.preventDefault();
     });
@@ -19,7 +26,7 @@
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
         target: '.navbar-fixed-top',
-        offset: 51
+        offset: navHeight + 1
     })
 
     // Closes the Responsive Menu on Menu Item Click
