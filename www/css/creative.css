@@ -379,6 +379,7 @@ header .header-content .header-content-inner p {
 .caption1 { background: rgba(45,171,226,.7); }
 .caption2 { background: rgba(57,169,53,.7); }
 .caption3 { background: rgba(43,38,91,.7); }
+.caption4 { background: rgba(185,206,0,.7); }
 
 .mobile .portfolio-box {
     margin-bottom:10px;
@@ -388,6 +389,7 @@ header .header-content .header-content-inner p {
 .mobile .caption1 { background: rgba(45,171,226,.5); }
 .mobile .caption2 { background: rgba(57,169,53,.5); }
 .mobile .caption3 { background: rgba(43,38,91,.5); }
+.mobile .caption4 { background: rgba(185,206,0,.5); }
 
 .mobile * {
     -webkit-transition: none !important;
